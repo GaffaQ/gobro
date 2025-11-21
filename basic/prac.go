@@ -10,7 +10,6 @@ func main() {
 	for i := 0; i < len(slicegw); i++ {
 		sum += slicegw[i]
 	}
-
 	fmt.Println(sum)
 
 	//2
@@ -21,7 +20,6 @@ func main() {
 			maks = slicekedua[i]
 		}
 	}
-
 	fmt.Println(maks)
 
 	//3

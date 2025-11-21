@@ -24,6 +24,24 @@ func main() {
 	fmt.Println(hello("Gaffa"))
 
 	fmt.Println(helloAnimal("Anjing", getAnimal))
+
+	// anonymous function
+
+	banned := func(name string) bool {
+		if name == "anjing" {
+			return true
+		}
+		return false
+	}
+
+	regist("anjing", banned)
+	regist("Gaffa", func(name string) bool {
+		if name == "anjing" {
+			return true
+		}
+		return false
+	})
+
 }
 
 // VOID FUNCTION
@@ -42,7 +60,6 @@ func sumall(a int, b int) int {
 
 // RETURN MULTIVALUE FUNCTION
 func kategori(a int, b int) (int, string) {
-
 	sum := a + b
 	tipe := ""
 	if sum > 1 {
@@ -50,7 +67,6 @@ func kategori(a int, b int) (int, string) {
 	} else {
 		tipe = "jelek"
 	}
-
 	return sum, tipe
 }
 
@@ -68,7 +84,6 @@ func sumALls(numbers ...int) int {
 	for _, v := range numbers {
 		totals += v
 	}
-
 	return totals
 }
 
@@ -87,10 +102,29 @@ func getGreeting(name string) string {
 }
 
 // parameter as function
+
+type fungsi func(string) string
+
 func getAnimal(name string) string {
 	return name + "!"
 }
 
-func helloAnimal(name string, animal func(string) string) string {
+func helloAnimal(name string, animal fungsi) string {
 	return "You animal name is " + animal(name)
+}
+
+//func helloAnimal(name string, animal func(string) string) string {
+//	return "You animal name is " + animal(name)
+//}
+
+// anonymous function
+
+type Banneds func(string) bool
+
+func regist(name string, banned Banneds) {
+	if banned(name) {
+		fmt.Println("Banned!", name)
+	} else {
+		fmt.Println("Welcome", name)
+	}
 }
