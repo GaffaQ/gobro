@@ -14,6 +14,11 @@ func main() {
 	fmt.Println(test())
 
 	fmt.Println(sumALls(1, 2, 3, 4, 5))
+
+	fmt.Println(sumAllslice([]int{1, 2, 3, 4, 5}))
+
+	nums := []int{1, 2, 3, 4, 5}
+	fmt.Println(sumALls(nums...))
 }
 
 // VOID FUNCTION
@@ -59,5 +64,14 @@ func sumALls(numbers ...int) int {
 		totals += v
 	}
 
+	return totals
+}
+
+func sumAllslice(numbers []int) int {
+
+	totals := 0
+	for _, v := range numbers {
+		totals += v
+	}
 	return totals
 }
