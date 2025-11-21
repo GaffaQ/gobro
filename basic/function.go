@@ -128,3 +128,5 @@ func regist(name string, banned Banneds) {
 		fmt.Println("Welcome", name)
 	}
 }
+
+//recursive function
