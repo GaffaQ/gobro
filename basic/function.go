@@ -19,6 +19,11 @@ func main() {
 
 	nums := []int{1, 2, 3, 4, 5}
 	fmt.Println(sumALls(nums...))
+
+	hello := getGreeting
+	fmt.Println(hello("Gaffa"))
+
+	fmt.Println(helloAnimal("Anjing", getAnimal))
 }
 
 // VOID FUNCTION
@@ -74,4 +79,18 @@ func sumAllslice(numbers []int) int {
 		totals += v
 	}
 	return totals
+}
+
+// function as value
+func getGreeting(name string) string {
+	return "Hello " + name
+}
+
+// parameter as function
+func getAnimal(name string) string {
+	return name + "!"
+}
+
+func helloAnimal(name string, animal func(string) string) string {
+	return "You animal name is " + animal(name)
 }
