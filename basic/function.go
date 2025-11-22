@@ -42,6 +42,8 @@ func main() {
 		return false
 	})
 
+	fmt.Println(sensorWord("gaffa", ss))
+
 }
 
 // VOID FUNCTION
@@ -129,4 +131,22 @@ func regist(name string, banned Banneds) {
 	}
 }
 
-//recursive function
+type sensor func(string) bool
+
+func sensorWord(word string, sens sensor) string {
+	teks := ""
+	if sens(word) {
+		teks = "..."
+	} else {
+		teks = word
+	}
+	return teks
+}
+
+func ss(teks string) bool {
+
+	if teks == "anjing" {
+		return true
+	}
+	return false
+}
