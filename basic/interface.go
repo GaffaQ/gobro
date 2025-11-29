@@ -27,6 +27,13 @@ func (human Human) getName() string {
 	return human.name
 }
 
+// interface kosong = bisa menerima/mengirim semua tipe data di golang
+func ups() any {
+	//return 1
+	//return true
+	return "Ups"
+}
+
 func main() {
 
 	aini := Human{"Aini", 20}
@@ -34,5 +41,8 @@ func main() {
 
 	sayHello(aini)
 	sayHello(michi)
+
+	var ups any = ups()
+	fmt.Println(ups)
 
 }

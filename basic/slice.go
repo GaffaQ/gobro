@@ -58,7 +58,7 @@ func main() {
 	fmt.Println(newSlice2)
 	fmt.Println(newSlice)
 
-	//perul
+	//perulangan
 	slicegw := []string{"gaffa", "fadhlanul", "rozaq", "jumat", "sabtu"}
 	for i := 0; i < len(slicegw); i++ {
 		fmt.Println(slicegw[i])

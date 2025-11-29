@@ -32,7 +32,8 @@ func main() {
 
 	//=========================
 
-	values := [3]int{1,
+	values := [3]int{
+		1,
 		2,
 		3, //harus ada koma nya di akhir
 	}
