@@ -38,11 +38,8 @@ func main() {
 
 	aini := Human{"Aini", 20}
 	michi := Hewan{"Michi", 4}
-
 	sayHello(aini)
 	sayHello(michi)
-
 	var ups any = ups()
 	fmt.Println(ups)
-
 }
