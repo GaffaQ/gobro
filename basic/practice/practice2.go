@@ -22,7 +22,7 @@ func functionAsValue2(nama string) string {
 	return "Haloo " + nama
 }
 
-type leng func(string) int
+type leng func(strings) int
 
 func funcAsParam(nama string, fung leng) {
 	fmt.Println("Halo", nama, fung(nama))
