@@ -48,4 +48,7 @@ func main() {
 	fmt.Println(nilaibaru)
 	ubahNilai(&nilaibaru)
 	fmt.Println(nilaibaru)
+
+	fmt.Println("=============================")
+
 }

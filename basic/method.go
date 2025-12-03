@@ -14,5 +14,4 @@ func (Person Person) say() {
 func main() {
 	aini := Person{"Aini", 20}
 	aini.say()
-
 }
