@@ -7,6 +7,14 @@ type Person struct {
 	age  int
 }
 
+func ubahNama(nama *Person) {
+	nama.name = "apalu"
+}
+
+func ubahNilai(nilai *int) {
+	*nilai = 10
+}
+
 func main() {
 
 	a := 10
@@ -26,6 +34,18 @@ func main() {
 	// Arterisk operator *
 	person3 := Person{"Gaffa", 20}
 	person4 := &person3
-
 	fmt.Println(person, person4)
+	fmt.Println("=============================")
+
+	orang := Person{"Oke gas", 19}
+	fmt.Println(orang.name)
+	ubahNama(&orang)
+	fmt.Println(orang.name)
+
+	fmt.Println("=============================")
+
+	nilaibaru := 100
+	fmt.Println(nilaibaru)
+	ubahNilai(&nilaibaru)
+	fmt.Println(nilaibaru)
 }
