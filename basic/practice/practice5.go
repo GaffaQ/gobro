@@ -6,11 +6,11 @@ func main() {
 
 	//defer panicHandler()
 
-	var x any = 123
+	var x any = "apa"
 
 	nilai, cek := x.(string)
 
-	fmt.Println(nilai, cek)
+	fmt.Println("nilai", nilai, "cek:", cek)
 
 	if testPanic(false) {
 		panic("PANIC WOI")

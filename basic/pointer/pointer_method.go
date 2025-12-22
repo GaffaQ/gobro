@@ -48,6 +48,6 @@ func main() {
 	fmt.Println(yazid)
 
 	//return function with pointer
-	fmt.Println(*createEntity("ripal"))
+	fmt.Println(createEntity("ripal"))
 
 }

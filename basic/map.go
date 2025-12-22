@@ -6,9 +6,12 @@ func main() {
 
 	iniMap := make(map[int]string)
 	// iniMap := map[int]string {    }
+	iniMap2 := map[int]string{1: "satu", 2: "dua"}
 
 	iniMap[1] = "gaffa"
 	iniMap[2] = "jumat"
+
+	iniMap2[1] = "apa"
 
 	fmt.Println(iniMap)
 

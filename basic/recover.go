@@ -6,7 +6,11 @@ import "fmt"
 func end() {
 	fmt.Println("end")
 	msg := recover()
-	fmt.Println(msg)
+	if msg != nil {
+		fmt.Println(msg)
+	} else {
+		fmt.Println("Gada eror bamg")
+	}
 }
 
 func siu(cek bool) {
