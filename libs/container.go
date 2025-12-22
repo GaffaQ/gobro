@@ -59,5 +59,49 @@ func main() {
 		fmt.Println(i.Value)
 	}
 
-	fmt.Println("============ MOVE ============")
+	fmt.Println("============ TYPE ASSERTION ============")
+
+	data4 := list.New()
+
+	data4.PushBack(1)
+	data4.PushBack("Dua")
+	data4.PushBack("Tiga")
+	data4.PushBack("Empat")
+
+	for i := data4.Front(); i != nil; i = i.Next() {
+
+		val, ok := i.Value.(int)
+
+		fmt.Println(val, ok)
+
+	}
+
+	fmt.Println("============ PRACTICE ============")
+	fmt.Println("1. ")
+
+	practice1 := list.New()
+	practice1.PushBack(1)
+	practice1.PushBack(2)
+	practice1.PushBack(4)
+	practice1.PushBack(5)
+
+	for i := practice1.Front(); i != nil; i = i.Next() {
+		fmt.Println(i.Value)
+	}
+
+	practice1.InsertBefore(3, practice1.Front().Next().Next())
+	for i := practice1.Front(); i != nil; i = i.Next() {
+		fmt.Println(i.Value)
+	}
+
+	fmt.Println("2. ")
+	practice2 := list.New()
+	practice2.PushBack("A")
+	practice2.PushBack("C")
+	practice2.PushBack("B")
+	practice2.PushBack("D")
+
+	for i := practice2.Back(); i != nil; i = i.Prev() {
+		fmt.Println(i.Value)
+	}
 }
